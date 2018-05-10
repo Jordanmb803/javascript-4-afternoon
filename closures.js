@@ -22,14 +22,14 @@ function outer() {
   Invoke outer saving the return value into another variable called 'inner'.
 */
   
-// Code Here
+var inner = outer()
 
 
 
 //Once you do that, invoke inner.
 
 //Code Here
-
+inner()
 
 
 ////////// PROBLEM 2 //////////
@@ -52,7 +52,8 @@ function callFriend(name) {
 */
 
 //Code Here
-
+var callJake = callFriend('Jake')
+callJake(435-555-9248)
 
 
 ////////// PROBLEM 3 //////////
@@ -62,15 +63,23 @@ function callFriend(name) {
 */
 
 //Code Here
+function makeCounter(){
+  let number = 0;
+  return function(){
+    ++number;
+    return number;
+  }
+}
+
+// Uncomment this once you make your function
+  var count = makeCounter();  
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
-//Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
 
 
 
